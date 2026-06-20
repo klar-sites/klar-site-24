@@ -1,224 +1,268 @@
-/**
- * Nordic Shoulder Clinic - Main JavaScript
- * 
- * Features:
- * - Mobile menu toggle
- * - Sticky navbar effects
- * - Scroll reveal animations (IntersectionObserver)
- * - FAQ accordion
- * - Active navigation highlighting
- * - Vanilla JS form validation
- */
+// =========================================
+// Apex Shoulder Clinic - script.js
+// Vanilla JavaScript for all interactivity
+// =========================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /**
-     * 1. Mobile Navigation Toggle
-     */
-    const initMobileNav = () => {
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
+    // =========================================
+    // 1. Theme Toggle (Dark/Light Mode)
+    // =========================================
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const iconMoon = document.getElementById('iconMoon');
+    const iconSun = document.getElementById('iconSun');
 
-        if (!menuToggle || !navLinks) return;
+    // Function to apply theme based on preference
+    const applyTheme = (theme) => {
+        root.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+            iconMoon.style.display = 'none';
+            iconSun.style.display = 'block';
+        } else {
+            iconMoon.style.display = 'block';
+            iconSun.style.display = 'none';
+        }
+    };
 
-        menuToggle.addEventListener('click', () => {
-            const isActive = navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active', isActive);
-            menuToggle.setAttribute('aria-expanded', isActive);
+    // Initialize theme from localStorage or default to 'light'
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+
+    // =========================================
+    // 2. Mobile Navigation Toggle
+    // =========================================
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isExpanded ? 'hidden' : '';
         });
 
         // Close mobile menu when a link is clicked
-        const links = navLinks.querySelectorAll('a');
-        links.forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+                if (navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 }
             });
         });
-    };
+    }
 
-    /**
-     * 2. Sticky Navbar Scroll Effect
-     */
-    const initStickyHeader = () => {
-        const header = document.getElementById('siteHeader');
-        if (!header) return;
-
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll(); // Init on load
-    };
-
-    /**
-     * 3. Scroll Reveal Animations
-     */
-    const initScrollReveal = () => {
-        const revealElements = document.querySelectorAll('.reveal');
-        if (!revealElements.length) return;
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    obs.unobserve(entry.target); // Stop observing once visible
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        revealElements.forEach(el => observer.observe(el));
-    };
-
-    /**
-     * 4. FAQ Accordion
-     */
-    const initAccordion = () => {
-        const accordionItems = document.querySelectorAll('.accordion-item');
-        if (!accordionItems.length) return;
-
-        accordionItems.forEach(item => {
-            const header = item.querySelector('.accordion-header');
-            const content = item.querySelector('.accordion-content');
-            
-            if (!header || !content) return;
-
-            header.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-
-                // Close all other open items
-                accordionItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        const otherContent = otherItem.querySelector('.accordion-content');
-                        if (otherContent) otherContent.style.maxHeight = null;
-                    }
-                });
-
-                // Toggle current item
-                if (isActive) {
-                    item.classList.remove('active');
-                    content.style.maxHeight = null;
-                } else {
-                    item.classList.add('active');
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-            });
-        });
-    };
-
-    /**
-     * 5. Active Navigation Highlighting
-     */
-    const initActiveNav = () => {
-        const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
-        if (!navLinks.length) return;
-
-        let currentPath = window.location.pathname.split('/').pop();
-        if (currentPath === '' || currentPath === '/') {
-            currentPath = 'index.html';
+    // =========================================
+    // 3. Sticky Navbar Effect on Scroll
+    // =========================================
+    const siteHeader = document.getElementById('siteHeader');
+    
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            siteHeader.classList.add('scrolled');
+        } else {
+            siteHeader.classList.remove('scrolled');
         }
-
-        navLinks.forEach(link => {
-            const linkPath = link.getAttribute('href').split('/').pop();
-            if (linkPath === currentPath) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
     };
 
-    /**
-     * 6. Form Validation (Contact Page)
-     */
-    const initFormValidation = () => {
-        const form = document.getElementById('contactForm');
-        if (!form) return;
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Run on load in case page is refreshed mid-scroll
 
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const phone = document.getElementById('phone');
-        const message = document.getElementById('message');
-        const successMsg = document.getElementById('formSuccess');
+    // =========================================
+    // 4. Active Navigation Highlighting
+    // =========================================
+    const navLinks = document.querySelectorAll('.nav-link');
+    // Get current page filename (e.g., 'index.html', 'about.html')
+    let currentPath = window.location.pathname.split('/').pop();
+    
+    // Fallback for local environments where path might be empty
+    if (currentPath === '' || currentPath === undefined) {
+        currentPath = 'index.html';
+    }
 
-        const showError = (input, message) => {
-            const formGroup = input.closest('.form-group');
-            if (!formGroup) return;
-            formGroup.classList.add('error');
-            const errorSpan = formGroup.querySelector('.form-error');
-            if (errorSpan) errorSpan.textContent = message;
-        };
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 
-        const clearError = (input) => {
-            const formGroup = input.closest('.form-group');
-            if (!formGroup) return;
-            formGroup.classList.remove('error');
-        };
+    // =========================================
+    // 5. Scroll Reveal Animations
+    // =========================================
+    const revealElements = document.querySelectorAll('.reveal');
 
-        const validators = {
-            name: (val) => val.trim().length > 1 || 'Please enter your full name.',
-            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) || 'Please enter a valid email address.',
-            phone: (val) => /^[+]?[\d\s-]{7,}$/.test(val) || 'Please enter a valid phone number.',
-            message: (val) => val.trim().length > 10 || 'Please provide a brief description (min. 10 characters).'
-        };
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Trigger when 15% of the element is visible
+    };
 
-        // Real-time validation on blur
-        [name, email, phone, message].forEach(input => {
-            if (!input) return;
-            input.addEventListener('blur', () => {
-                const validator = validators[input.id];
-                const result = validator(input.value);
-                if (result !== true) {
-                    showError(input, result);
-                } else {
-                    clearError(input);
-                }
-            });
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add a slight delay based on index for staggering effect within grids
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Stop observing once revealed
+            }
         });
+    }, observerOptions);
 
-        form.addEventListener('submit', (e) => {
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // =========================================
+    // 6. FAQ Accordion
+    // =========================================
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all currently open items
+            faqItems.forEach(openItem => {
+                openItem.classList.remove('active');
+                openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                openItem.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Open the clicked item if it was previously closed
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+                // Set max-height to scrollHeight to trigger CSS transition
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // =========================================
+    // 7. Form Validation (Contact Page)
+    // =========================================
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            let isFormValid = true;
-
-            [name, email, phone, message].forEach(input => {
-                if (!input) return;
-                const validator = validators[input.id];
-                const result = validator(input.value);
-                if (result !== true) {
-                    showError(input, result);
-                    isFormValid = false;
-                } else {
-                    clearError(input);
+            
+            let isValid = true;
+            
+            // Helper function to show error
+            const showError = (inputId, errorId, message = null) => {
+                const input = document.getElementById(inputId);
+                const errorElement = document.getElementById(errorId);
+                input.classList.add('error');
+                if (message) {
+                    errorElement.textContent = message;
                 }
-            });
+                errorElement.style.display = 'block';
+                isValid = false;
+            };
 
-            if (isFormValid) {
-                // Simulate form submission
-                if (successMsg) {
-                    successMsg.style.display = 'block';
-                    form.reset();
-                    setTimeout(() => {
-                        successMsg.style.display = 'none';
-                    }, 5000);
-                }
+            // Helper function to clear error
+            const clearError = (inputId, errorId) => {
+                const input = document.getElementById(inputId);
+                const errorElement = document.getElementById(errorId);
+                input.classList.remove('error');
+                errorElement.style.display = 'none';
+            };
+
+            // Clear all previous errors
+            clearError('name', 'nameError');
+            clearError('email', 'emailError');
+            clearError('phone', 'phoneError');
+            clearError('message', 'messageError');
+
+            // Validate Name
+            const name = document.getElementById('name').value.trim();
+            if (name === '' || name.length < 2) {
+                showError('name', 'nameError', 'Please enter your full name.');
+            }
+
+            // Validate Email
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showError('email', 'emailError', 'Please enter a valid email address.');
+            }
+
+            // Validate Phone
+            const phone = document.getElementById('phone').value.trim();
+            const phoneRegex = /^[+]?[\d\s\-()]{7,}$/; // Basic phone validation
+            if (!phoneRegex.test(phone)) {
+                showError('phone', 'phoneError', 'Please enter a valid phone number.');
+            }
+
+            // Validate Message
+            const message = document.getElementById('message').value.trim();
+            if (message === '' || message.length < 10) {
+                showError('message', 'messageError', 'Please provide a brief description (min 10 characters).');
+            }
+
+            // If valid, show success message
+            if (isValid) {
+                document.getElementById('formSuccess').style.display = 'block';
+                contactForm.reset(); // Clear form fields
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('formSuccess').style.display = 'none';
+                }, 5000);
             }
         });
-    };
+    }
 
-    // Initialize all modules
-    initMobileNav();
-    initStickyHeader();
-    initScrollReveal();
-    initAccordion();
-    initActiveNav();
-    initFormValidation();
+    // =========================================
+    // 8. Smooth Scrolling for Anchor Links
+    // =========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            
+            // Ignore empty hashes or placeholder links
+            if (targetId === '#' || targetId === '') return; 
+            
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Calculate offset for fixed header
+                const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight - 20; // 20px extra padding
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
 });

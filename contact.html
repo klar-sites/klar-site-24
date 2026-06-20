@@ -3,215 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Nordic Shoulder Clinic</title>
-    <meta name="description" content="Contact the Nordic Shoulder Clinic to book a consultation, ask a question, or get directions to our facility. We are here to help you recover.">
+    <title>Contact Us | Apex Shoulder Clinic</title>
+    <meta name="description" content="Contact Apex Shoulder Clinic to book a consultation, ask a question, or get directions to our facility. We are here to help you recover.">
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- ================= Header / Navigation ================= -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
-                    <path d="M6 10v2a6 6 0 0 0 12 0v-2"></path>
-                    <path d="M12 18v4"></path>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.5 3.75-7.5 3.75-7.5-3.75L12 4.2zM4 8.5l7 3.5v7.5l-7-3.5V8.5zm9 11V12l7-3.5v7.5l-7 3.5z"/>
                 </svg>
-                Nordic<span>Shoulder</span>
+                <span>Apex Shoulder Clinic</span>
             </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="treatments.html">Treatments</a>
-                <a href="contact.html" class="active">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Book Consultation</a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="treatments.html" class="nav-link">Treatments</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Page Header -->
-        <section class="hero" style="min-height: 50vh; align-items: flex-end; padding-bottom: 4rem;">
+        <!-- ================= Hero / Intro Section ================= -->
+        <section class="hero" style="min-height: 50vh; padding-top: 10rem; display: block;">
             <div class="hero-bg-accent hero-bg-accent-1"></div>
             <div class="container">
-                <div class="hero-content reveal">
-                    <h1>Get in Touch</h1>
-                    <p class="hero-subtitle">Ready to take the first step towards recovery? Our team is here to answer your questions and schedule your consultation.</p>
+                <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <span class="eyebrow reveal">Get in Touch</span>
+                    <h1 class="reveal" style="font-size: 3rem;">We're Here to Help You Recover</h1>
+                    <p class="reveal" style="margin: 0 auto;">Ready to take the first step towards a pain-free life? Fill out the form below, give us a call, or visit our state-of-the-art facility. Our team is ready to assist you.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Form & Info -->
-        <section class="section">
+        <!-- ================= Contact Grid ================= -->
+        <section class="section" style="padding-top: 0;">
             <div class="container">
-                <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+                <div class="grid-2" style="gap: var(--space-2xl); align-items: stretch;">
                     
                     <!-- Contact Form -->
-                    <div class="card reveal" style="padding: 2.5rem;">
+                    <div class="card reveal" style="display: flex; flex-direction: column;">
                         <h2>Request a Consultation</h2>
-                        <p style="margin-bottom: 2rem;">Fill out the form below, and our front desk team will get back to you within 24 hours.</p>
+                        <p>Fill out the form and our care coordinators will get back to you within 24 hours to schedule your appointment.</p>
                         
-                        <form id="contactForm" novalidate>
+                        <form id="contactForm" novalidate style="margin-top: var(--space-md);">
                             <div class="form-group">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
-                                <span class="form-error" id="nameError">Please enter your name.</span>
+                                <input type="text" id="name" name="name" class="form-control" required aria-describedby="nameError">
+                                <span class="error-message" id="nameError">Please enter your full name.</span>
                             </div>
                             
+                            <div class="grid-2" style="gap: var(--space-md);">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required aria-describedby="emailError">
+                                    <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required aria-describedby="phoneError">
+                                    <span class="error-message" id="phoneError">Please enter a valid phone number.</span>
+                                </div>
+                            </div>
+
                             <div class="form-group">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required>
-                                <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                                <label for="message" class="form-label">How can we help you?</label>
+                                <textarea id="message" name="message" class="form-control" required aria-describedby="messageError" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+                                <span class="error-message" id="messageError">Please enter a brief message.</span>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+46 70 123 4567" required>
-                                <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message / Reason for Visit</label>
-                                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Briefly describe your symptoms or what you need help with..." required></textarea>
-                                <span class="form-error" id="messageError">Please tell us how we can help you.</span>
-                            </div>
-                            
+
                             <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
-                            <div id="formSuccess" style="display: none; margin-top: 1rem; color: var(--color-success); text-align: center; font-weight: 500;">
-                                Thank you! Your request has been sent. We will contact you shortly.
-                            </div>
                         </form>
+
+                        <div id="formSuccess" style="display: none; margin-top: var(--space-md); padding: var(--space-md); background-color: var(--color-primary-light); border: 1px solid var(--color-primary); border-radius: var(--radius-sm); color: var(--color-primary-dark); text-align: center;">
+                            <strong>Thank you!</strong> Your request has been received. We will contact you shortly.
+                        </div>
                     </div>
 
-                    <!-- Contact Information -->
-                    <div class="reveal">
-                        <h2>Clinic Information</h2>
-                        <p>Visit us at our state-of-the-art facility or reach out via phone and email.</p>
-                        
-                        <div class="card" style="margin-bottom: 1.5rem;">
-                            <div class="flex gap-sm" style="align-items: flex-start;">
-                                <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.5rem;">Location</h4>
-                                    <p style="margin-bottom: 0;">Nordic Shoulder Clinic<br>123 Health Avenue<br>Stockholm, 111 22, Sweden</p>
-                                </div>
+                    <!-- Contact Info -->
+                    <div class="reveal" style="display: flex; flex-direction: column; gap: var(--space-md);">
+                        <div class="card">
+                            <h3>Clinic Information</h3>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-md); margin-top: var(--space-md);">
+                                <li style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                                    <span class="card-icon" style="width: 36px; height: 36px; margin: 0; flex-shrink: 0;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Address</strong><br>
+                                        123 Orthopedic Way<br>
+                                        Health City, HC 45678
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                                    <span class="card-icon" style="width: 36px; height: 36px; margin: 0; flex-shrink: 0;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Phone</strong><br>
+                                        Main: (123) 456-7890<br>
+                                        Emergency: (123) 999-0000
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                                    <span class="card-icon" style="width: 36px; height: 36px; margin: 0; flex-shrink: 0;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Email</strong><br>
+                                        care@apexshoulder.com
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-2" style="gap: var(--space-md);">
+                            <div class="card">
+                                <h4>Opening Hours</h4>
+                                <ul style="list-style: none; margin-top: var(--space-sm); color: var(--color-text-muted);">
+                                    <li style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);"><span>Mon - Fri</span> <span>8:00 - 18:00</span></li>
+                                    <li style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);"><span>Saturday</span> <span>9:00 - 14:00</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Sunday</span> <span>Closed</span></li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <h4>Getting Here</h4>
+                                <p style="margin-top: var(--space-sm); font-size: var(--font-size-sm);">Free on-site parking available. Accessible via Metro Line 4, Station 'Health City Central'.</p>
                             </div>
                         </div>
 
-                        <div class="card" style="margin-bottom: 1.5rem;">
-                            <div class="flex gap-sm" style="align-items: flex-start;">
-                                <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.5rem;">Contact Numbers</h4>
-                                    <p style="margin-bottom: 0.25rem;">Main: <a href="tel:+4681234567">+46 8 123 456 7</a></p>
-                                    <p style="margin-bottom: 0.25rem;">Email: <a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></p>
-                                    <p style="margin-bottom: 0; color: var(--color-error); font-weight: 500;">Emergency (Post-Op): <a href="tel:+468999111222" style="color: inherit;">+46 8 999 111 222</a></p>
-                                </div>
+                        <!-- Map Placeholder -->
+                        <div class="card" style="padding: 0; overflow: hidden; flex-grow: 1; min-height: 250px; display: flex; align-items: center; justify-content: center; background-color: var(--color-bg);">
+                            <div style="text-align: center; color: var(--color-text-muted);">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: var(--space-sm);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <p>Interactive Map Placeholder</p>
+                                <p style="font-size: var(--font-size-sm); margin-bottom: 0;">123 Orthopedic Way</p>
                             </div>
-                        </div>
-
-                        <div class="card" style="margin-bottom: 1.5rem;">
-                            <div class="flex gap-sm" style="align-items: flex-start;">
-                                <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12 6 12 12 16 14"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.5rem;">Opening Hours</h4>
-                                    <p style="margin-bottom: 0.25rem;">Monday - Friday: 8:00 - 18:00</p>
-                                    <p style="margin-bottom: 0.25rem;">Saturday: 9:00 - 14:00</p>
-                                    <p style="margin-bottom: 0;">Sunday: Closed</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card" style="margin-bottom: 1.5rem;">
-                            <div class="flex gap-sm" style="align-items: flex-start;">
-                                <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="1" y="3" width="15" height="13" rx="2" ry="2"/>
-                                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                                        <circle cx="5.5" cy="18.5" r="2.5"/>
-                                        <circle cx="18.5" cy="18.5" r="2.5"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.5rem;">Parking & Transport</h4>
-                                    <p style="margin-bottom: 0;">Free patient parking is available in Lot B. The clinic is a 5-minute walk from Stockholm Central Station (T-Centralen).</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-sm">
-                            <a href="#" aria-label="Instagram" class="card-icon" style="width: 40px; height: 40px;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                                </svg>
-                            </a>
-                            <a href="#" aria-label="Facebook" class="card-icon" style="width: 40px; height: 40px;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                                </svg>
-                            </a>
-                            <a href="#" aria-label="LinkedIn" class="card-icon" style="width: 40px; height: 40px;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                    <rect x="2" y="9" width="4" height="12"/>
-                                    <circle cx="4" cy="4" r="2"/>
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Map Placeholder -->
-        <section class="section section-alt">
+        <!-- ================= Emergency CTA ================= -->
+        <section class="section" style="padding-top: 0;">
             <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Find Us</h2>
-                </div>
-                <div class="map-placeholder reveal">
-                    <div class="flex-center flex-col">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <p style="margin: 0;">Map data &copy; Google Maps</p>
-                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">123 Health Avenue, Stockholm</p>
-                    </div>
+                <div class="card reveal" style="background-color: var(--color-text); color: #fff; text-align: center;">
+                    <h3 style="color: #fff;">Experiencing a Severe Acute Injury?</h3>
+                    <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--space-md);">If you have suffered a traumatic shoulder injury (e.g., dislocation, fracture) and are in severe pain, please call our emergency line immediately.</p>
+                    <a href="tel:1239990000" class="btn btn-primary" style="background-color: #fff; color: var(--color-text);">Call (123) 999-0000</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ================= Footer ================= -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Nordic Shoulder</h4>
-                    <p>Premium orthopedic and physiotherapy care dedicated to shoulder health and recovery.</p>
+                    <h4>Apex Shoulder Clinic</h4>
+                    <p>Providing premium, evidence-based orthopedic care and physiotherapy to help you move freely again.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -219,29 +188,34 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="treatments.html">Treatments</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Book Consultation</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
+                    <h4>Contact</h4>
                     <ul>
-                        <li>123 Health Avenue</li>
-                        <li>Stockholm, Sweden</li>
-                        <li><a href="tel:+4681234567">+46 8 123 456 7</a></li>
-                        <li><a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></li>
+                        <li>123 Orthopedic Way</li>
+                        <li>Health City, HC 45678</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: care@apexshoulder.com</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Opening Hours</h4>
                     <ul>
-                        <li>Mon - Fri: 8:00 - 18:00</li>
-                        <li>Saturday: 9:00 - 14:00</li>
+                        <li>Mon - Fri: 8:00 AM - 6:00 PM</li>
+                        <li>Saturday: 9:00 AM - 2:00 PM</li>
                         <li>Sunday: Closed</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
+                <p class="mb-0">&copy; 2024 Apex Shoulder Clinic. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
             </div>
         </div>
     </footer>

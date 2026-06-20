@@ -3,271 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treatments & Services | Nordic Shoulder Clinic</title>
-    <meta name="description" content="Explore our comprehensive shoulder treatments including diagnostics, physiotherapy, arthroscopic surgery, and post-surgery rehabilitation.">
+    <title>Treatments | Apex Shoulder Clinic</title>
+    <meta name="description" content="Explore our comprehensive shoulder treatments, from physiotherapy and pain management to arthroscopic surgery and post-surgery rehabilitation.">
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- ================= Header / Navigation ================= -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
-                    <path d="M6 10v2a6 6 0 0 0 12 0v-2"></path>
-                    <path d="M12 18v4"></path>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.5 3.75-7.5 3.75-7.5-3.75L12 4.2zM4 8.5l7 3.5v7.5l-7-3.5V8.5zm9 11V12l7-3.5v7.5l-7 3.5z"/>
                 </svg>
-                Nordic<span>Shoulder</span>
+                <span>Apex Shoulder Clinic</span>
             </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="treatments.html" class="active">Treatments</a>
-                <a href="contact.html">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Book Consultation</a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="treatments.html" class="nav-link active">Treatments</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Page Header -->
-        <section class="hero" style="min-height: 50vh; align-items: flex-end; padding-bottom: 4rem;">
+        <!-- ================= Hero / Intro Section ================= -->
+        <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
             <div class="hero-bg-accent hero-bg-accent-1"></div>
-            <div class="container">
-                <div class="hero-content reveal">
-                    <h1>Shoulder Treatments</h1>
-                    <p class="hero-subtitle">Comprehensive care from the first sign of pain to full functional recovery.</p>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow reveal">Our Services</span>
+                    <h1 class="reveal" style="font-size: 3rem;">Advanced Treatment for Shoulder Injuries</h1>
+                    <p class="reveal">From diagnosis to recovery, we offer comprehensive, evidence-based solutions tailored to your specific condition. Our goal is to restore your mobility and eliminate pain.</p>
+                    <div class="btn-group reveal">
+                        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal" style="aspect-ratio: 4/3;">
+                    <img src="https://images.unsplash.com/photo-1631815589968-fdb09e22f5b6?q=80&w=1200&auto=format&fit=crop" alt="Orthopedic doctor explaining a shoulder model to a patient" loading="eager" width="800" height="600">
                 </div>
             </div>
         </section>
 
-        <!-- Overview -->
+        <!-- ================= Overview & Causes ================= -->
         <section class="section">
-            <div class="container">
-                <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <h2>Understanding Shoulder Injuries</h2>
-                    <p>The shoulder is the most mobile joint in the human body, making it highly susceptible to injury and wear. Whether caused by acute trauma, repetitive overhead movements, or age-related degeneration, shoulder conditions can significantly impact your daily life. At Nordic Shoulder Clinic, we provide a full spectrum of treatments tailored to the specific mechanics of this complex joint.</p>
+            <div class="container grid-2" style="gap: var(--space-2xl); align-items: center;">
+                <div class="reveal">
+                    <span class="eyebrow">Understanding Shoulder Injuries</span>
+                    <h2>An Overview of Shoulder Conditions</h2>
+                    <p>The shoulder is the most mobile joint in the human body, making it highly susceptible to injury and wear. Whether caused by acute trauma, repetitive strain, or age-related degeneration, shoulder pain can significantly impact your daily life.</p>
+                    <p>At Apex, we specialize in diagnosing the exact source of your pain and implementing targeted treatments to heal the joint, not just mask the symptoms.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Common Causes & Risk Factors</h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-sm);">
+                        <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                            <span class="card-icon" style="width: 32px; height: 32px; margin: 0; flex-shrink: 0;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span><strong>Sports & Acute Trauma:</strong> Dislocations, fractures, and sudden falls.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                            <span class="card-icon" style="width: 32px; height: 32px; margin: 0; flex-shrink: 0;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span><strong>Repetitive Strain:</strong> Overhead movements in sports or occupations.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                            <span class="card-icon" style="width: 32px; height: 32px; margin: 0; flex-shrink: 0;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span><strong>Degenerative Conditions:</strong> Osteoarthritis and tendon wear over time.</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-sm);">
+                            <span class="card-icon" style="width: 32px; height: 32px; margin: 0; flex-shrink: 0;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span><strong>Poor Posture:</strong> Chronic misalignment leading to impingement.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Symptoms & Causes -->
-        <section class="section section-alt">
+        <!-- ================= Symptoms & Diagnostics ================= -->
+        <section class="section trust-bar">
             <div class="container">
-                <div class="grid grid-2">
-                    <div class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                            </svg>
-                        </div>
-                        <h3>Common Symptoms</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li>Persistent pain, especially when reaching overhead or sleeping on the affected side.</li>
-                            <li>Stiffness and loss of range of motion.</li>
-                            <li>Weakness in the arm or shoulder.</li>
-                            <li>Popping, clicking, or grinding sensations during movement.</li>
-                            <li>Instability or feeling that the shoulder might "slip out of place."</li>
-                        </ul>
-                    </div>
-                    <div class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="12" y1="8" x2="12" y2="12"/>
-                                <line x1="12" y1="16" x2="12.01" y2="16"/>
-                            </svg>
-                        </div>
-                        <h3>Primary Causes</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li>Sports injuries from tennis, swimming, baseball, or weightlifting.</li>
-                            <li>Repetitive strain from occupational tasks or manual labor.</li>
-                            <li>Acute trauma, such as falls or direct blows to the shoulder.</li>
-                            <li>Degenerative conditions like osteoarthritis or tendon wear-and-tear.</li>
-                            <li>Poor posture and muscular imbalances over time.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Diagnostic Methods -->
-        <section class="section">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Diagnostic Methods</h2>
-                    <p>Accurate diagnosis is the foundation of effective treatment.</p>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <h4>Physical Examination</h4>
-                        <p>A comprehensive assessment of your range of motion, strength, and stability to identify specific points of pain and mechanical dysfunction.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h4>Ultrasound Imaging</h4>
-                        <p>Dynamic, real-time imaging that allows us to visualize tendons and ligaments in motion, excellent for diagnosing rotator cuff issues.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h4>MRI & X-Ray</h4>
-                        <p>High-resolution magnetic resonance imaging for soft tissue detail, and X-rays to assess bone structure and rule out fractures or arthritis.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Treatment Options -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Treatment Options</h2>
-                    <p>We exhaust conservative methods before recommending surgical intervention.</p>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/>
-                                <path d="M6 10v2a6 6 0 0 0 12 0v-2"/>
-                            </svg>
-                        </div>
-                        <h4>Physiotherapy</h4>
-                        <p>Targeted exercise programs, manual therapy, and modalities like ultrasound or TENS to reduce inflammation and restore function.</p>
-                    </article>
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 2L2 13l9 9 9-9-9-11z"/>
-                                <path d="M11 2v20"/>
-                            </svg>
-                        </div>
-                        <h4>Injections</h4>
-                        <p>Corticosteroid injections for rapid pain relief, or regenerative treatments like PRP (Platelet-Rich Plasma) to stimulate tissue healing.</p>
-                    </article>
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                            </svg>
-                        </div>
-                        <h4>Arthroscopic Surgery</h4>
-                        <p>Minimally invasive procedures to repair torn tendons, remove bone spurs, or stabilize the joint, resulting in faster recovery.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rehabilitation & Recovery -->
-        <section class="section">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Rehabilitation & Recovery Expectations</h2>
-                    <p>A structured, phased approach to ensure safe and lasting recovery.</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step reveal">
-                        <h4>Phase 1: Protection</h4>
-                        <p>Focuses on pain management, reducing inflammation, and protecting the injured tissue. Often involves immobilization or rest.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 2: Mobility</h4>
-                        <p>Gentle, passive range-of-motion exercises to prevent stiffness and begin restoring normal joint mechanics.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 3: Strength</h4>
-                        <p>Progressive resistance training to rebuild the muscles surrounding the shoulder, providing stability and support.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 4: Function</h4>
-                        <p>Sport-specific or task-specific training to prepare the shoulder for the demands of your daily life or athletic activities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Treatments -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Related Treatments</h2>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <h3>Rotator Cuff Repair</h3>
-                        <p>Surgical reattachment of torn tendons to the head of the humerus, followed by a structured rehab protocol.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h3>SLAP Tear Repair</h3>
-                        <p>Arthroscopic stabilization of the labrum (the ring of cartilage surrounding the shoulder socket) to restore stability.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h3>Shoulder Impingement Therapy</h3>
-                        <p>Conservative management focusing on posture correction, scapular stabilization, and activity modification.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container" style="max-width: 800px;">
-                <div class="text-center mb-lg reveal">
-                    <h2>Treatment FAQs</h2>
+                <div class="section-header reveal">
+                    <span class="eyebrow">Assessment</span>
+                    <h2>Symptoms & Diagnostic Methods</h2>
+                    <p>Accurate diagnosis is the first step toward effective recovery. We use state-of-the-art technology to pinpoint your condition.</p>
                 </div>
                 
+                <div class="grid-2 mb-4">
+                    <div class="card reveal">
+                        <h3>Recognizing the Symptoms</h3>
+                        <p>If you experience any of the following, it's time to consult a specialist:</p>
+                        <ul style="list-style: disc; padding-left: var(--space-md); margin-top: var(--space-sm); color: var(--color-text-muted);">
+                            <li>Persistent pain that disrupts sleep, especially when lying on the affected arm.</li>
+                            <li>Loss of range of motion or stiffness in the joint.</li>
+                            <li>Weakness in the arm or inability to lift objects overhead.</li>
+                            <li>Clicking, popping, or grinding sensations during movement.</li>
+                        </ul>
+                    </div>
+                    <div class="card reveal">
+                        <h3>Our Diagnostic Process</h3>
+                        <p>We combine physical assessments with advanced imaging:</p>
+                        <ul style="list-style: disc; padding-left: var(--space-md); margin-top: var(--space-sm); color: var(--color-text-muted);">
+                            <li><strong>Physical Examination:</strong> Assessing range of motion, strength, and pain points.</li>
+                            <li><strong>Ultrasound:</strong> Real-time imaging of tendons and soft tissues.</li>
+                            <li><strong>MRI:</strong> Detailed cross-sectional imaging for complex soft tissue tears.</li>
+                            <li><strong>X-Ray:</strong> Evaluating bone structure, fractures, and arthritis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Treatment Options ================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Treatment Modalities</span>
+                    <h2>Comprehensive Treatment Options</h2>
+                    <p>We offer a full spectrum of care, from conservative physiotherapy to advanced surgical interventions.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.5 3.75-7.5 3.75-7.5-3.75L12 4.2zM4 8.5l7 3.5v7.5l-7-3.5V8.5z"></path></svg>
+                        </div>
+                        <h3>Targeted Physiotherapy</h3>
+                        <p>Customized exercise programs, manual therapy, and modalities like ultrasound to strengthen muscles and restore mobility.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <h3>Pain Management</h3>
+                        <p>Corticosteroid injections and nerve blocks to reduce acute inflammation and allow participation in physical therapy.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        </div>
+                        <h3>PRP Therapy</h3>
+                        <p>Platelet-Rich Plasma injections utilizing your body's own healing factors to accelerate tendon and tissue repair.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <h3>Arthroscopic Surgery</h3>
+                        <p>Minimally invasive procedures to repair rotator cuff tears, labral tears, and remove bone spurs with faster recovery times.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </div>
+                        <h3>Joint Replacement</h3>
+                        <p>Total or partial shoulder replacement for severe arthritis or complex fractures to eliminate pain and restore function.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        </div>
+                        <h3>Post-Op Rehabilitation</h3>
+                        <p>Structured recovery protocols following surgery to ensure proper healing, prevent stiffness, and rebuild strength.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Rehabilitation Process & Recovery ================= -->
+        <section class="section trust-bar">
+            <div class="container grid-2" style="gap: var(--space-2xl); align-items: flex-start;">
                 <div class="reveal">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            Is surgery always necessary for shoulder injuries?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                No. In fact, the majority of shoulder conditions can be successfully treated with conservative methods like physiotherapy, activity modification, and injections. Surgery is typically only recommended when conservative treatments fail, or in cases of severe acute trauma.
+                    <span class="eyebrow">The Road to Recovery</span>
+                    <h2>Our Rehabilitation Process</h2>
+                    <p>Rehabilitation is a phased journey. We guide you through each stage, ensuring your shoulder heals correctly and regains full capacity.</p>
+                    
+                    <div class="timeline" style="margin-top: var(--space-xl);">
+                        <div class="timeline-item reveal" style="padding-bottom: var(--space-md);">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Phase 1: Acute Management</h4>
+                                <p>Focus on reducing pain and inflammation while protecting the injured tissue.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal" style="padding-bottom: var(--space-md);">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Phase 2: Mobility Restoration</h4>
+                                <p>Gentle, progressive exercises to restore full range of motion and flexibility.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal" style="padding-bottom: var(--space-md);">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Phase 3: Strength Building</h4>
+                                <p>Targeted strengthening of the rotator cuff and surrounding stabilizer muscles.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Phase 4: Functional Return</h4>
+                                <p>Sport-specific or task-specific training to ensure safe return to activity.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="card reveal" style="position: sticky; top: 100px;">
+                    <h3>Recovery Expectations</h3>
+                    <p>Recovery timelines vary based on the specific injury and treatment:</p>
+                    <div style="margin-top: var(--space-md);">
+                        <div style="margin-bottom: var(--space-md);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);"><span><strong>Tendinitis / Impingement</strong></span> <span>4-6 Weeks</span></div>
+                            <div style="width: 100%; height: 8px; background-color: var(--color-bg); border-radius: 4px; overflow: hidden;"><div style="width: 30%; height: 100%; background-color: var(--color-primary);"></div></div>
+                        </div>
+                        <div style="margin-bottom: var(--space-md);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);"><span><strong>Frozen Shoulder</strong></span> <span>3-6 Months</span></div>
+                            <div style="width: 100%; height: 8px; background-color: var(--color-bg); border-radius: 4px; overflow: hidden;"><div style="width: 75%; height: 100%; background-color: var(--color-primary);"></div></div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);"><span><strong>Surgical Recovery</strong></span> <span>4-6 Months</span></div>
+                            <div style="width: 100%; height: 8px; background-color: var(--color-bg); border-radius: 4px; overflow: hidden;"><div style="width: 100%; height: 100%; background-color: var(--color-primary);"></div></div>
+                        </div>
+                    </div>
+                    <p style="margin-top: var(--space-md); font-size: var(--font-size-sm);">*Note: These are average estimates. Your personal timeline will be discussed during your consultation.</p>
+                </div>
+            </div>
+        </section>
 
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            What are the risks of shoulder surgery?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
+        <!-- ================= FAQ Section ================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Treatments FAQ</span>
+                    <h2>Treatment Specific Questions</h2>
+                    <p>Answers to common questions regarding our treatment protocols.</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is arthroscopic shoulder surgery?</span>
+                            <span class="faq-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                             </span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                As with any surgery, there are risks, including infection, blood clots, nerve damage, or stiffness. However, arthroscopic shoulder surgery is highly refined, and complications are rare. Our surgeons will discuss all potential risks with you prior to any procedure.
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Arthroscopy is a minimally invasive surgical procedure. A tiny camera (arthroscope) is inserted through small incisions, allowing the surgeon to view, diagnose, and repair joint issues without making large cuts. This results in less pain and faster recovery compared to open surgery.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            When can I return to sports after rehabilitation?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How does PRP therapy work for shoulder injuries?</span>
+                            <span class="faq-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                             </span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                Return to play depends entirely on the injury and the sport. While you might return to light activities in a few weeks, high-demand sports like swimming or baseball may require 4 to 6 months of rehabilitation to ensure the shoulder is fully stable and strong.
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Platelet-Rich Plasma (PRP) therapy involves drawing a small amount of your blood, separating the platelets via centrifuge, and injecting the concentrated plasma into the injured area. Platelets contain growth factors that stimulate and accelerate tissue healing, making it highly effective for chronic tendon issues.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is surgery always necessary for rotator cuff tears?</span>
+                            <span class="faq-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>No. Many partial rotator cuff tears can be successfully treated with conservative methods like physiotherapy, activity modification, and PRP injections. Surgery is generally reserved for complete tears, acute injuries in active individuals, or cases where conservative treatment has failed over 3-6 months.</p>
                             </div>
                         </div>
                     </div>
@@ -275,25 +303,25 @@
             </div>
         </section>
 
-        <!-- Booking CTA -->
+        <!-- ================= Final CTA Section ================= -->
         <section class="section">
             <div class="container">
-                <div class="card reveal" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white); text-align: center; padding: 4rem 2rem; border: none;">
-                    <h2 style="color: var(--color-white);">Start Your Treatment Journey</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 2rem;">Get an accurate diagnosis and a clear path to recovery from our specialists.</p>
-                    <a href="contact.html" class="btn btn-white">Book a Consultation</a>
+                <div class="cta-section reveal">
+                    <h2>Find Your Path to Recovery</h2>
+                    <p>Don't let shoulder pain limit your life. Contact our specialists to discuss which treatment option is right for you.</p>
+                    <a href="contact.html" class="btn btn-primary">Book Your Consultation</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ================= Footer ================= -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Nordic Shoulder</h4>
-                    <p>Premium orthopedic and physiotherapy care dedicated to shoulder health and recovery.</p>
+                    <h4>Apex Shoulder Clinic</h4>
+                    <p>Providing premium, evidence-based orthopedic care and physiotherapy to help you move freely again.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -301,29 +329,34 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="treatments.html">Treatments</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Book Consultation</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
+                    <h4>Contact</h4>
                     <ul>
-                        <li>123 Health Avenue</li>
-                        <li>Stockholm, Sweden</li>
-                        <li><a href="tel:+4681234567">+46 8 123 456 7</a></li>
-                        <li><a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></li>
+                        <li>123 Orthopedic Way</li>
+                        <li>Health City, HC 45678</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: care@apexshoulder.com</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Opening Hours</h4>
                     <ul>
-                        <li>Mon - Fri: 8:00 - 18:00</li>
-                        <li>Saturday: 9:00 - 14:00</li>
+                        <li>Mon - Fri: 8:00 AM - 6:00 PM</li>
+                        <li>Saturday: 9:00 AM - 2:00 PM</li>
                         <li>Sunday: Closed</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
+                <p class="mb-0">&copy; 2024 Apex Shoulder Clinic. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
             </div>
         </div>
     </footer>
