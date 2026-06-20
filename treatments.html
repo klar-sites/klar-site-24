@@ -1,333 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treatments & Services | Nordic Shoulder Clinic</title>
-    <meta name="description" content="Explore our comprehensive shoulder treatments including diagnostics, physiotherapy, arthroscopic surgery, and post-surgery rehabilitation.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our comprehensive shoulder treatments — from rotator cuff rehabilitation and frozen shoulder therapy to sports injury recovery and post-surgery care. Evidence-based protocols tailored to you.">
+  <meta name="theme-color" content="#f8fafb">
+  <title>Treatments – OrthoCore Shoulder Clinic</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header class="site-header" id="siteHeader">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
-                    <path d="M6 10v2a6 6 0 0 0 12 0v-2"></path>
-                    <path d="M12 18v4"></path>
-                </svg>
-                Nordic<span>Shoulder</span>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="treatments.html" class="active">Treatments</a>
-                <a href="contact.html">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Book Consultation</a>
-            </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="OrthoCore Shoulder Clinic – Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="12" r="8" stroke="var(--color-primary)" stroke-width="2.5" fill="none"/>
+          <path d="M8 28 L14 20 L18 20 L24 28" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        OrthoCore
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="treatments.html" class="active">Treatments</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="section" style="background-color:var(--color-primary-light); padding-bottom:var(--space-2xl);">
+      <div class="container text-center">
+        <h1 class="reveal" style="font-size:var(--font-scale-4xl);">Our Treatments</h1>
+        <p class="reveal" style="color:var(--color-text-secondary); font-size:var(--font-scale-lg); max-width:700px; margin:var(--space-md) auto 0;">
+          Every shoulder is different. We offer a comprehensive range of evidence-based assessments and treatments — from conservative rehabilitation to post-surgical recovery — all personalised to your unique needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW & CONDITIONS -->
+    <section class="section" id="conditions-overview" aria-labelledby="conditionsOverviewHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="conditionsOverviewHeading">Shoulder Conditions We Treat</h2>
+          <p>Understanding your condition is the first step towards effective recovery. Below are the most common shoulder problems we see.</p>
         </div>
-    </header>
 
-    <main>
-        <!-- Page Header -->
-        <section class="hero" style="min-height: 50vh; align-items: flex-end; padding-bottom: 4rem;">
-            <div class="hero-bg-accent hero-bg-accent-1"></div>
-            <div class="container">
-                <div class="hero-content reveal">
-                    <h1>Shoulder Treatments</h1>
-                    <p class="hero-subtitle">Comprehensive care from the first sign of pain to full functional recovery.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Overview -->
-        <section class="section">
-            <div class="container">
-                <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <h2>Understanding Shoulder Injuries</h2>
-                    <p>The shoulder is the most mobile joint in the human body, making it highly susceptible to injury and wear. Whether caused by acute trauma, repetitive overhead movements, or age-related degeneration, shoulder conditions can significantly impact your daily life. At Nordic Shoulder Clinic, we provide a full spectrum of treatments tailored to the specific mechanics of this complex joint.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Symptoms & Causes -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="grid grid-2">
-                    <div class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                            </svg>
-                        </div>
-                        <h3>Common Symptoms</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li>Persistent pain, especially when reaching overhead or sleeping on the affected side.</li>
-                            <li>Stiffness and loss of range of motion.</li>
-                            <li>Weakness in the arm or shoulder.</li>
-                            <li>Popping, clicking, or grinding sensations during movement.</li>
-                            <li>Instability or feeling that the shoulder might "slip out of place."</li>
-                        </ul>
-                    </div>
-                    <div class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="12" y1="8" x2="12" y2="12"/>
-                                <line x1="12" y1="16" x2="12.01" y2="16"/>
-                            </svg>
-                        </div>
-                        <h3>Primary Causes</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li>Sports injuries from tennis, swimming, baseball, or weightlifting.</li>
-                            <li>Repetitive strain from occupational tasks or manual labor.</li>
-                            <li>Acute trauma, such as falls or direct blows to the shoulder.</li>
-                            <li>Degenerative conditions like osteoarthritis or tendon wear-and-tear.</li>
-                            <li>Poor posture and muscular imbalances over time.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Diagnostic Methods -->
-        <section class="section">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Diagnostic Methods</h2>
-                    <p>Accurate diagnosis is the foundation of effective treatment.</p>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <h4>Physical Examination</h4>
-                        <p>A comprehensive assessment of your range of motion, strength, and stability to identify specific points of pain and mechanical dysfunction.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h4>Ultrasound Imaging</h4>
-                        <p>Dynamic, real-time imaging that allows us to visualize tendons and ligaments in motion, excellent for diagnosing rotator cuff issues.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h4>MRI & X-Ray</h4>
-                        <p>High-resolution magnetic resonance imaging for soft tissue detail, and X-rays to assess bone structure and rule out fractures or arthritis.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Treatment Options -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Treatment Options</h2>
-                    <p>We exhaust conservative methods before recommending surgical intervention.</p>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/>
-                                <path d="M6 10v2a6 6 0 0 0 12 0v-2"/>
-                            </svg>
-                        </div>
-                        <h4>Physiotherapy</h4>
-                        <p>Targeted exercise programs, manual therapy, and modalities like ultrasound or TENS to reduce inflammation and restore function.</p>
-                    </article>
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 2L2 13l9 9 9-9-9-11z"/>
-                                <path d="M11 2v20"/>
-                            </svg>
-                        </div>
-                        <h4>Injections</h4>
-                        <p>Corticosteroid injections for rapid pain relief, or regenerative treatments like PRP (Platelet-Rich Plasma) to stimulate tissue healing.</p>
-                    </article>
-                    <article class="card reveal">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                            </svg>
-                        </div>
-                        <h4>Arthroscopic Surgery</h4>
-                        <p>Minimally invasive procedures to repair torn tendons, remove bone spurs, or stabilize the joint, resulting in faster recovery.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rehabilitation & Recovery -->
-        <section class="section">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Rehabilitation & Recovery Expectations</h2>
-                    <p>A structured, phased approach to ensure safe and lasting recovery.</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step reveal">
-                        <h4>Phase 1: Protection</h4>
-                        <p>Focuses on pain management, reducing inflammation, and protecting the injured tissue. Often involves immobilization or rest.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 2: Mobility</h4>
-                        <p>Gentle, passive range-of-motion exercises to prevent stiffness and begin restoring normal joint mechanics.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 3: Strength</h4>
-                        <p>Progressive resistance training to rebuild the muscles surrounding the shoulder, providing stability and support.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <h4>Phase 4: Function</h4>
-                        <p>Sport-specific or task-specific training to prepare the shoulder for the demands of your daily life or athletic activities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Treatments -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="text-center mb-lg reveal">
-                    <h2>Related Treatments</h2>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card reveal">
-                        <h3>Rotator Cuff Repair</h3>
-                        <p>Surgical reattachment of torn tendons to the head of the humerus, followed by a structured rehab protocol.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h3>SLAP Tear Repair</h3>
-                        <p>Arthroscopic stabilization of the labrum (the ring of cartilage surrounding the shoulder socket) to restore stability.</p>
-                    </article>
-                    <article class="card reveal">
-                        <h3>Shoulder Impingement Therapy</h3>
-                        <p>Conservative management focusing on posture correction, scapular stabilization, and activity modification.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container" style="max-width: 800px;">
-                <div class="text-center mb-lg reveal">
-                    <h2>Treatment FAQs</h2>
-                </div>
-                
-                <div class="reveal">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            Is surgery always necessary for shoulder injuries?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                No. In fact, the majority of shoulder conditions can be successfully treated with conservative methods like physiotherapy, activity modification, and injections. Surgery is typically only recommended when conservative treatments fail, or in cases of severe acute trauma.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            What are the risks of shoulder surgery?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                As with any surgery, there are risks, including infection, blood clots, nerve damage, or stiffness. However, arthroscopic shoulder surgery is highly refined, and complications are rare. Our surgeons will discuss all potential risks with you prior to any procedure.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            When can I return to sports after rehabilitation?
-                            <span class="accordion-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-content-inner">
-                                Return to play depends entirely on the injury and the sport. While you might return to light activities in a few weeks, high-demand sports like swimming or baseball may require 4 to 6 months of rehabilitation to ensure the shoulder is fully stable and strong.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Booking CTA -->
-        <section class="section">
-            <div class="container">
-                <div class="card reveal" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white); text-align: center; padding: 4rem 2rem; border: none;">
-                    <h2 style="color: var(--color-white);">Start Your Treatment Journey</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 2rem;">Get an accurate diagnosis and a clear path to recovery from our specialists.</p>
-                    <a href="contact.html" class="btn btn-white">Book a Consultation</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Nordic Shoulder</h4>
-                    <p>Premium orthopedic and physiotherapy care dedicated to shoulder health and recovery.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="treatments.html">Treatments</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li>123 Health Avenue</li>
-                        <li>Stockholm, Sweden</li>
-                        <li><a href="tel:+4681234567">+46 8 123 456 7</a></li>
-                        <li><a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Opening Hours</h4>
-                    <ul>
-                        <li>Mon - Fri: 8:00 - 18:00</li>
-                        <li>Saturday: 9:00 - 14:00</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
-            </div>
+        <!-- Rotator Cuff -->
+        <div class="treatment-detail reveal">
+          <div>
+            <h3>Rotator Cuff Injuries</h3>
+            <p>The rotator cuff is a group of four muscles and tendons that stabilise the shoulder. Injury can range from tendinitis and impingement to partial or full-thickness tears. Symptoms include pain when lifting the arm, weakness, and night pain. Treatment options include targeted strengthening, manual therapy, and in some cases coordinated post-surgical rehab.</p>
+            <p><strong>Common causes:</strong> overuse, repetitive overhead activity, ageing, trauma.</p>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&q=80" alt="Physiotherapist demonstrating shoulder exercises" loading="lazy" style="border-radius:var(--radius-lg); width:100%;" width="500" height="350">
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Frozen Shoulder -->
+        <div class="treatment-detail reveal">
+          <div>
+            <h3>Frozen Shoulder (Adhesive Capsulitis)</h3>
+            <p>Frozen shoulder causes progressive stiffness and pain that severely limits movement. It typically develops gradually and can persist for months. Our approach combines gentle mobilisation, stretching, and pain management to gradually restore range of motion.</p>
+            <p><strong>Phases:</strong> Freezing (painful), Frozen (stiff), Thawing (resolution). Early intervention can shorten the duration.</p>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Therapist assisting patient with shoulder mobility" loading="lazy" style="border-radius:var(--radius-lg); width:100%;" width="500" height="350">
+          </div>
+        </div>
+
+        <!-- Shoulder Impingement -->
+        <div class="treatment-detail reveal">
+          <div>
+            <h3>Shoulder Impingement Syndrome</h3>
+            <p>Impingement occurs when the rotator cuff tendons are compressed during arm elevation. It causes a sharp, catching pain and weakness. Treatment focuses on correcting movement patterns, strengthening the rotator cuff and scapular stabilisers, and reducing inflammation.</p>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" loading="lazy" alt="Clinician assessing shoulder movement" style="border-radius:var(--radius-lg); width:100%;" width="500" height="350">
+          </div>
+        </div>
+
+        <!-- Labrum Tears -->
+        <div class="treatment-detail reveal">
+          <div>
+            <h3>Labrum Tears (SLAP &amp; Bankart)</h3>
+            <p>The labrum is a ring of cartilage that deepens the shoulder socket. Tears can result from trauma or repetitive overhead motion. SLAP tears affect the top of the labrum; Bankart lesions often accompany dislocation. Rehabilitation may be conservative or post-surgical, focusing on stability and strength.</p>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1664478546384-d57ef25f4f1a?w=500&q=80" loading="lazy" alt="Patient doing rehabilitation exercises with band" style="border-radius:var(--radius-lg); width:100%;" width="500" height="350">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER CONDITIONS (grid) -->
+    <section class="section section-light" id="more-conditions" aria-labelledby="moreConditionsHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="moreConditionsHeading">Other Common Shoulder Problems</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal">
+            <h4>Tendinitis &amp; Bursitis</h4>
+            <p>Inflammation of the biceps tendon or subacromial bursa. We use load management and anti-inflammatory strategies to resolve pain.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Shoulder Dislocation &amp; Instability</h4>
+            <p>Recurrent dislocations require retraining of dynamic stabilisers. We build strength and control to reduce the risk of future episodes.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Arthritis of the Shoulder</h4>
+            <p>Osteoarthritis or inflammatory arthritis can cause chronic pain. Our management includes mobility work, strength maintenance, and pain relief strategies.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Fractures &amp; Post-Trauma</h4>
+            <p>Following a clavicle or humeral fracture, we guide safe rehabilitation to restore function once healing is underway.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Nerve-Related Shoulder Pain</h4>
+            <p>Conditions like thoracic outlet syndrome or cervical radiculopathy can refer pain to the shoulder. We assess and treat the root cause.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGNOSTIC METHODS -->
+    <section class="section" id="diagnostics" aria-labelledby="diagnosticsHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="diagnosticsHeading">How We Diagnose</h2>
+          <p>Accurate diagnosis is the foundation of effective treatment. We combine clinical expertise with modern tools.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal text-center">
+            <h4 style="color:var(--color-primary);">Clinical Examination</h4>
+            <p>A thorough history and physical exam, including specialised shoulder tests, to identify the likely pathology.</p>
+          </div>
+          <div class="card reveal text-center">
+            <h4 style="color:var(--color-primary);">Diagnostic Imaging</h4>
+            <p>We can refer for X-ray, ultrasound, and MRI when needed, and we are skilled in interpreting results in context.</p>
+          </div>
+          <div class="card reveal text-center">
+            <h4 style="color:var(--color-primary);">Movement Analysis</h4>
+            <p>Functional assessment of how your shoulder moves during daily and sporting activities to uncover contributing factors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREATMENT OPTIONS & REHABILITATION PROCESS -->
+    <section class="section section-light" id="treatment-options" aria-labelledby="treatmentOptionsHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="treatmentOptionsHeading">Our Treatment Approach</h2>
+          <p>Every plan is built around your goals, your lifestyle, and the latest evidence.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal">
+            <h4>Manual Therapy</h4>
+            <p>Hands-on techniques including joint mobilisation, soft tissue release, and myofascial work to reduce pain and improve mobility.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Exercise Prescription</h4>
+            <p>Targeted, progressive exercises to strengthen the rotator cuff, scapular stabilisers, and entire kinetic chain.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Load Management</h4>
+            <p>Education on activity modification and gradual return to load, ensuring tissues heal without re-injury.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Post-Surgical Rehab</h4>
+            <p>Structured protocols following rotator cuff repair, labrum surgery, shoulder replacement, or fracture fixation.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Sport-Specific Rehab</h4>
+            <p>Return-to-sport programmes for athletes that simulate the demands of their sport in a controlled environment.</p>
+          </div>
+          <div class="card reveal">
+            <h4>Pain Neuroscience Education</h4>
+            <p>Understanding chronic pain through modern neuroscience to reduce fear and build confidence in movement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOVERY EXPECTATIONS -->
+    <section class="section" id="recovery" aria-labelledby="recoveryHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="recoveryHeading">What Recovery Looks Like</h2>
+          <p>Healing times vary, but you'll always know what to expect. Here's a general guide for common shoulder conditions.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Condition</th>
+                <th>Typical Sessions</th>
+                <th>Expected Timeline</th>
+                <th>Key Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rotator cuff tendinitis</td>
+                <td>6–10</td>
+                <td>8–12 weeks</td>
+                <td>Strengthening &amp; load management</td>
+              </tr>
+              <tr>
+                <td>Frozen shoulder</td>
+                <td>8–14</td>
+                <td>3–12 months</td>
+                <td>Mobility &amp; pain modulation</td>
+              </tr>
+              <tr>
+                <td>Shoulder impingement</td>
+                <td>6–8</td>
+                <td>6–10 weeks</td>
+                <td>Movement correction &amp; posture</td>
+              </tr>
+              <tr>
+                <td>Post-operative (rotator cuff)</td>
+                <td>12–16</td>
+                <td>4–6 months</td>
+                <td>Gradual tissue loading</td>
+              </tr>
+              <tr>
+                <td>Shoulder instability</td>
+                <td>8–12</td>
+                <td>3–6 months</td>
+                <td>Dynamic stability &amp; control</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center mt-3" style="color:var(--color-text-secondary);">These are estimates. Your specialist will provide a personalised timeline after your assessment.</p>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section section-light" id="faq" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="faqHeading">Frequently Asked Questions</h2>
+          <p>Answers to common questions about our treatments and what to expect from your sessions.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Will I need surgery for my shoulder problem?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">Most shoulder conditions respond well to conservative (non-surgical) management. Surgery is considered only when high-quality rehabilitation has not achieved the desired outcome, or when a structural problem clearly requires it. We will always exhaust conservative options first and discuss all possibilities with you.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How soon after an injury should I start physiotherapy?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">Early intervention is often beneficial. For acute injuries, we recommend starting within the first few days once any acute inflammation or fracture has been ruled out. Even if surgery is planned, prehabilitation can improve post-operative outcomes.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What if I'm not making progress?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">We continuously reassess your progress. If you plateau, we explore different strategies — this might mean adjusting your exercises, referring for repeat imaging, collaborating with your surgeon, or considering other modalities. You will never be left without a plan.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I continue my usual sports or activities during treatment?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">In most cases, modified activity is possible and even encouraged. We will guide you on what to avoid, what to modify, and when it's safe to return fully. Complete rest is rarely the answer for shoulder problems.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="treatmentsCtaHeading">
+      <div class="container text-center">
+        <div class="section-heading reveal">
+          <h2 id="treatmentsCtaHeading">Start Your Recovery Today</h2>
+          <p>Don't let shoulder pain hold you back any longer. Book a consultation and let us create your personalised treatment plan.</p>
+        </div>
+        <div style="display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg reveal">Book Consultation</a>
+          <a href="index.html" class="btn btn-outline btn-lg reveal">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OrthoCore Shoulder Clinic</h4>
+          <p>Specialist shoulder rehabilitation and physiotherapy. Evidence-based care delivered with compassion in a calm, premium environment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>12 Orchard Lane</li>
+            <li>London, W1U 3AB</li>
+            <li>020 7946 0123</li>
+            <li>hello@orthocore.co.uk</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Mon–Fri: 8:00am – 7:00pm</li>
+            <li>Saturday: 9:00am – 2:00pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 OrthoCore Shoulder Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
