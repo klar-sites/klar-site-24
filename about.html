@@ -1,271 +1,251 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about OrthoCore Shoulder Clinic — our philosophy, specialist team, and patient-centred approach to shoulder rehabilitation and recovery.">
-  <meta name="theme-color" content="#f8fafb">
-  <title>About Us – OrthoCore Shoulder Clinic</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nordic Shoulder Clinic</title>
+    <meta name="description" content="Learn about the Nordic Shoulder Clinic philosophy, our expert team, state-of-the-art facility, and patient-centered approach to shoulder rehabilitation.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="OrthoCore Shoulder Clinic – Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <circle cx="16" cy="12" r="8" stroke="var(--color-primary)" stroke-width="2.5" fill="none"/>
-          <path d="M8 28 L14 20 L18 20 L24 28" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        OrthoCore
-      </a>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="treatments.html">Treatments</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- PAGE HERO -->
-    <section class="section" style="background-color:var(--color-primary-light); padding-bottom:var(--space-2xl);">
-      <div class="container text-center">
-        <h1 class="reveal" style="font-size:var(--font-scale-4xl);">About OrthoCore</h1>
-        <p class="reveal" style="color:var(--color-text-secondary); font-size:var(--font-scale-lg); max-width:700px; margin:var(--space-md) auto 0;">
-          We are a dedicated team of shoulder specialists who believe that recovery is personal — and that every patient deserves expert care delivered with warmth and compassion.
-        </p>
-      </div>
-    </section>
-
-    <!-- OUR STORY -->
-    <section class="section" id="story" aria-labelledby="storyHeading">
-      <div class="container">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center;" class="reveal">
-          <div>
-            <h2 id="storyHeading">Our Story</h2>
-            <p style="margin-bottom:var(--space-md);">OrthoCore was founded in 2010 by Dr. Henrik Larsson, a physiotherapist who saw a gap in how shoulder injuries were treated. Too often, patients received generic rehab protocols that failed to address the unique mechanics of the shoulder joint — or the individual needs of the person behind the injury.</p>
-            <p style="margin-bottom:var(--space-md);">Our clinic was built on a simple premise: combine the best available evidence with a genuinely human approach. From day one, we committed to longer appointment times, continuity of care, and a calm, unhurried clinical environment.</p>
-            <p>Over fifteen years, we've grown from a single-room practice into one of the most trusted shoulder rehabilitation centres in the region — but our core philosophy has never changed.</p>
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80"
-              alt="Bright, modern clinic interior with natural light and calm treatment areas"
-              style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); width:100%;"
-              loading="lazy"
-              width="600"
-              height="400"
-            >
-          </div>
+    <!-- Header / Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
+                    <path d="M6 10v2a6 6 0 0 0 12 0v-2"></path>
+                    <path d="M12 18v4"></path>
+                </svg>
+                Nordic<span>Shoulder</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Book Consultation</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- PHILOSOPHY & MISSION -->
-    <section class="section section-light" id="philosophy" aria-labelledby="philosophyHeading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="philosophyHeading">Our Philosophy</h2>
-          <p>We believe recovery is a partnership — between specialist and patient, science and empathy, structure and flexibility.</p>
-        </div>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="min-height: 50vh; align-items: flex-end; padding-bottom: 4rem;">
+            <div class="hero-bg-accent hero-bg-accent-1"></div>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1>About Our Clinic</h1>
+                    <p class="hero-subtitle">Dedicated exclusively to the complexities of the shoulder, combining surgical excellence with compassionate rehabilitation.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid-3 mt-3">
-          <div class="card reveal text-center">
-            <h3 style="color:var(--color-primary);">Patient-Centred Care</h3>
-            <p>You are not a diagnosis. You are a person with goals, fears, and a life you want to return to. Every decision we make starts with understanding what matters to you.</p>
-          </div>
-          <div class="card reveal text-center">
-            <h3 style="color:var(--color-primary);">Clinical Excellence</h3>
-            <p>We invest heavily in continuing education, peer review, and staying current with the latest research. If a treatment isn't supported by evidence, we don't use it.</p>
-          </div>
-          <div class="card reveal text-center">
-            <h3 style="color:var(--color-primary);">Continuity &amp; Trust</h3>
-            <p>You'll see the same clinician throughout your journey. We believe therapeutic alliance — the trust between you and your therapist — is a powerful predictor of outcome.</p>
-          </div>
-        </div>
+        <!-- Clinic Story -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div class="reveal">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2008, Nordic Shoulder Clinic began as a specialized practice responding to a growing need for focused, expert care in shoulder orthopedics. We recognized that the shoulder is one of the most complex joints in the human body, and generic treatments often fall short.</p>
+                        <p>Over the years, we have grown into a premier facility, bringing together top-tier orthopedic surgeons, physiotherapists, and diagnostic specialists under one roof. Our singular focus allows us to perfect our craft and offer unparalleled expertise in both conservative and surgical shoulder management.</p>
+                        <p>Today, we are proud to be a trusted destination for athletes, professionals, and individuals seeking to restore their quality of life through comprehensive shoulder care.</p>
+                    </div>
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" alt="Modern physiotherapy room at Nordic Shoulder Clinic" loading="lazy" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="text-center mt-3 reveal">
-          <h3 style="font-size:var(--font-scale-2xl); margin-bottom:var(--space-md);">Our Mission</h3>
-          <p style="max-width:650px; margin:0 auto; color:var(--color-text-secondary);">To provide the highest standard of shoulder rehabilitation in an environment that feels calm, safe, and genuinely supportive — so every patient leaves not just recovered, but empowered.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Philosophy & Mission -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Our Philosophy & Mission</h2>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 16v-4"/>
+                                <path d="M12 8h.01"/>
+                            </svg>
+                        </div>
+                        <h3>Our Philosophy</h3>
+                        <p>We believe in treating the whole person, not just the joint. True recovery requires understanding the patient's lifestyle, goals, and concerns. We prioritize conservative treatments whenever possible, reserving surgery for when it is truly necessary.</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To restore mobility and eliminate pain through evidence-based, personalized shoulder care. We are committed to achieving the best possible outcomes for our patients, allowing them to return to their passions unhindered.</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>Compassion, integrity, and excellence form the core of our practice. We communicate transparently, treat with empathy, and never compromise on the quality of our medical standards.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <!-- TEAM -->
-    <section class="section" id="team" aria-labelledby="teamHeading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="teamHeading">Our Specialist Team</h2>
-          <p>Meet the people who will guide your recovery. Each member brings deep expertise and a genuine passion for shoulder care.</p>
-        </div>
+        <!-- Team Profiles -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Meet the Experts</h2>
+                    <p>Our multidisciplinary team works collaboratively to ensure every aspect of your shoulder health is addressed.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop" alt="Dr. Elena Rossi" class="specialist-img" loading="lazy">
+                        <h3>Dr. Elena Rossi</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Lead Orthopedic Surgeon</p>
+                        <p>With a fellowship in shoulder surgery, Dr. Rossi leads our surgical team. She has pioneered several minimally invasive techniques used in our clinic today.</p>
+                    </article>
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop" alt="Michael Chen" class="specialist-img" loading="lazy">
+                        <h3>Michael Chen</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Senior Physiotherapist</p>
+                        <p>Michael specializes in biomechanical analysis and sports rehab. He designs the progressive exercise protocols that get our patients moving confidently again.</p>
+                    </article>
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop" alt="Dr. Sarah Jenkins" class="specialist-img" loading="lazy">
+                        <h3>Dr. Sarah Jenkins</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Pain Management Specialist</p>
+                        <p>Dr. Jenkins focuses on interventional pain management, utilizing ultrasound-guided injections and regenerative therapies to aid the healing process.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid-3">
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" alt="Dr. Henrik Larsson" loading="lazy" width="150" height="150">
-            <h4>Dr. Henrik Larsson</h4>
-            <p class="role">Lead Shoulder Specialist</p>
-            <p>15+ years in orthopedic physiotherapy. Trained in Gothenburg and London. Specialises in complex rotator cuff pathology and post-surgical rehabilitation.</p>
-          </div>
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1594824476967-48c8c964273f?w=300&q=80" alt="Dr. Amara Chen" loading="lazy" width="150" height="150">
-            <h4>Dr. Amara Chen</h4>
-            <p class="role">Sports Injury Specialist</p>
-            <p>Former athlete with a PhD in sports rehabilitation. Works with elite and amateur athletes on return-to-sport protocols, injury prevention, and performance.</p>
-          </div>
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&q=80" alt="Dr. Marcus Webb" loading="lazy" width="150" height="150">
-            <h4>Dr. Marcus Webb</h4>
-            <p class="role">Rehabilitation Physiotherapist</p>
-            <p>Specialises in chronic pain management and post-surgical recovery. Known for his calm, methodical approach and excellent patient outcomes.</p>
-          </div>
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Elin Nordström" loading="lazy" width="150" height="150">
-            <h4>Elin Nordström</h4>
-            <p class="role">Clinical Specialist Physio</p>
-            <p>Expert in manual therapy and exercise prescription. Brings a holistic, movement-based approach to shoulder rehabilitation.</p>
-          </div>
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80" alt="Dr. Raj Patel" loading="lazy" width="150" height="150">
-            <h4>Dr. Raj Patel</h4>
-            <p class="role">Diagnostic Specialist</p>
-            <p>Leads our diagnostic assessment service. Combines advanced imaging interpretation with clinical exam to provide precise, actionable diagnoses.</p>
-          </div>
-          <div class="team-member reveal">
-            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&q=80" alt="Sophie Andersson" loading="lazy" width="150" height="150">
-            <h4>Sophie Andersson</h4>
-            <p class="role">Patient Care Coordinator</p>
-            <p>Ensures every patient journey is smooth from booking to discharge. The friendly voice on the phone and the warm welcome at reception.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- Certifications & Facility -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&auto=format&fit=crop" alt="State-of-the-art clinic facility" loading="lazy" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+                    </div>
+                    <div class="reveal">
+                        <h2>State-of-the-Art Facility</h2>
+                        <p>Our clinic is designed for comfort and efficiency. We house advanced diagnostic imaging, modern surgical suites, and a dedicated rehabilitation gym all in one location. This integrated approach ensures seamless transitions from diagnosis to recovery.</p>
+                        <p>We maintain rigorous accreditation standards and are certified by national orthopedic boards, ensuring you receive care that meets the highest global benchmarks.</p>
+                        <div class="flex gap-md mt-lg" style="flex-wrap: wrap;">
+                            <div class="card" style="flex: 1; min-width: 140px; text-align: center;">
+                                <strong style="display: block; font-size: 1.5rem; color: var(--color-primary);">ISO</strong>
+                                <span style="font-size: 0.9rem;">Certified</span>
+                            </div>
+                            <div class="card" style="flex: 1; min-width: 140px; text-align: center;">
+                                <strong style="display: block; font-size: 1.5rem; color: var(--color-primary);">AOSM</strong>
+                                <span style="font-size: 0.9rem;">Accredited</span>
+                            </div>
+                            <div class="card" style="flex: 1; min-width: 140px; text-align: center;">
+                                <strong style="display: block; font-size: 1.5rem; color: var(--color-primary);">GCP</strong>
+                                <span style="font-size: 0.9rem;">Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- VALUES & FACILITY -->
-    <section class="section section-light" id="values" aria-labelledby="valuesHeading">
-      <div class="container">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center;" class="reveal">
-          <div>
-            <h2 id="valuesHeading">A Clinic Designed for Healing</h2>
-            <p style="margin-bottom:var(--space-md);">Our facility was intentionally designed to feel unlike a typical clinical environment. Soft lighting, natural materials, and generous space create an atmosphere that is calm and restorative — because we know that environment affects outcomes.</p>
-            <p style="margin-bottom:var(--space-md);">We have three private treatment rooms, a dedicated rehabilitation gym, and on-site diagnostic equipment. Every detail, from the colour palette to the furniture, was chosen to help you feel at ease.</p>
-            <ul style="list-style:disc; padding-left:1.25rem; color:var(--color-text-secondary);">
-              <li style="margin-bottom:var(--space-sm);">Private, sound-insulated treatment rooms</li>
-              <li style="margin-bottom:var(--space-sm);">Fully equipped rehabilitation gym</li>
-              <li style="margin-bottom:var(--space-sm);">On-site diagnostic imaging access</li>
-              <li>Accessible ground-floor facility with step-free access</li>
-            </ul>
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80"
-              alt="Modern, light-filled clinic interior with clean design and comfortable seating"
-              style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); width:100%;"
-              loading="lazy"
-              width="600"
-              height="400"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- Patient-Centered Care Approach -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Patient-Centered Care</h2>
+                    <p>You are at the heart of everything we do.</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card reveal">
+                        <h4>Personalized Attention</h4>
+                        <p>We take the time to listen. Your treatment plan is crafted around your specific injury, your daily demands, and your recovery goals. No cookie-cutter protocols.</p>
+                    </div>
+                    <div class="card reveal">
+                        <h4>Clear Communication</h4>
+                        <p>We demystify the medical jargon. You will understand your diagnosis, the proposed treatment, and the expected timeline before we begin.</p>
+                    </div>
+                    <div class="card reveal">
+                        <h4>Collaborative Decisions</h4>
+                        <p>We involve you in the decision-making process. Whether choosing between conservative and surgical options, we provide the facts and support your choice.</p>
+                    </div>
+                    <div class="card reveal">
+                        <h4>Continuous Support</h4>
+                        <p>Our care doesn't end when you leave the clinic. We provide remote guidance, progress tracking, and ongoing adjustments to your rehab plan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CERTIFICATIONS -->
-    <section class="section" id="certifications" aria-labelledby="certificationsHeading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="certificationsHeading">Our Credentials</h2>
-          <p>We hold the highest professional certifications and maintain rigorous standards of clinical governance.</p>
-        </div>
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="card reveal" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white); text-align: center; padding: 4rem 2rem; border: none;">
+                    <h2 style="color: var(--color-white);">Experience the Difference</h2>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 2rem;">Join the thousands who have reclaimed their mobility with us.</p>
+                    <a href="contact.html" class="btn btn-white">Book a Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div class="grid-3">
-          <div class="card reveal text-center">
-            <div style="font-size:2.5rem; margin-bottom:var(--space-sm);" aria-hidden="true">&#127891;</div>
-            <h4>Chartered Society of Physiotherapy</h4>
-            <p>All our clinicians are registered with the CSP, the UK's professional body for physiotherapists.</p>
-          </div>
-          <div class="card reveal text-center">
-            <div style="font-size:2.5rem; margin-bottom:var(--space-sm);" aria-hidden="true">&#9937;</div>
-            <h4>Health &amp; Care Professions Council</h4>
-            <p>HCPC-registered practitioners meeting the highest standards of conduct, performance, and ethics.</p>
-          </div>
-          <div class="card reveal text-center">
-            <div style="font-size:2.5rem; margin-bottom:var(--space-sm);" aria-hidden="true">&#9733;</div>
-            <h4>Shoulder Rehabilitation Certification</h4>
-            <p>Advanced certification in shoulder assessment and treatment from the European Shoulder Institute.</p>
-          </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Nordic Shoulder</h4>
+                    <p>Premium orthopedic and physiotherapy care dedicated to shoulder health and recovery.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>123 Health Avenue</li>
+                        <li>Stockholm, Sweden</li>
+                        <li><a href="tel:+4681234567">+46 8 123 456 7</a></li>
+                        <li><a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Mon - Fri: 8:00 - 18:00</li>
+                        <li>Saturday: 9:00 - 14:00</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
+            </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- CTA -->
-    <section class="section" aria-labelledby="aboutCtaHeading">
-      <div class="container text-center">
-        <div class="section-heading reveal">
-          <h2 id="aboutCtaHeading">Experience the OrthoCore Difference</h2>
-          <p>Whether you're dealing with a recent injury or a long-standing shoulder problem, we're here to help you move forward.</p>
-        </div>
-        <div style="display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-primary btn-lg reveal">Book Your Consultation</a>
-          <a href="treatments.html" class="btn btn-outline btn-lg reveal">Explore Treatments</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>OrthoCore Shoulder Clinic</h4>
-          <p>Specialist shoulder rehabilitation and physiotherapy. Evidence-based care delivered with compassion in a calm, premium environment.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="treatments.html">Treatments</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>12 Orchard Lane</li>
-            <li>London, W1U 3AB</li>
-            <li>020 7946 0123</li>
-            <li>hello@orthocore.co.uk</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Opening Hours</h4>
-          <ul>
-            <li>Mon–Fri: 8:00am – 7:00pm</li>
-            <li>Saturday: 9:00am – 2:00pm</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 OrthoCore Shoulder Clinic. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
