@@ -1,384 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nordic Shoulder Clinic | Premier Orthopedic Rehabilitation</title>
-  <meta name="description" content="Specialized shoulder injury clinic offering premium rehabilitation, sports injury recovery, and post-surgery physiotherapy. Book your consultation today.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic Shoulder Clinic | Premium Orthopedic & Physiotherapy Care</title>
+    <meta name="description" content="Specialized shoulder injury clinic offering orthopedic assessment, physiotherapy, post-surgery recovery, and pain management. Book your consultation today.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header & Navigation -->
-  <header class="site-header" id="site-header">
-    <div class="container navbar">
-      <a href="index.html" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L4 6v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V6l-8-4z"></path>
-          <path d="M9 12h6"></path>
-          <path d="M12 9v6"></path>
-        </svg>
-        Nordic Shoulder Clinic
-      </a>
-      
-      <nav class="nav-links" id="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="treatments.html">Treatments</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <!-- Header / Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
+                    <path d="M6 10v2a6 6 0 0 0 12 0v-2"></path>
+                    <path d="M12 18v4"></path>
+                </svg>
+                Nordic<span>Shoulder</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Book Consultation</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-          <svg id="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg id="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container flex" style="align-items: center; gap: var(--space-2xl);">
-        <div class="hero-content reveal">
-          <h1>Regain Your Movement, Restore Your Strength</h1>
-          <p>Expert diagnosis, personalized rehabilitation, and advanced pain management for shoulder injuries. Let our specialized orthopedic team guide you back to full mobility.</p>
-          <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-            <a href="treatments.html" class="btn btn-secondary">Explore Treatments</a>
-          </div>
-        </div>
-        <div class="hero-image reveal" style="flex: 1; min-width: 300px;">
-          <img src="https://images.unsplash.com/photo-1576091160399-115ba7985955?auto=format&fit=crop&w=800&q=80" 
-               alt="Physiotherapist assisting patient with shoulder rehabilitation" 
-               loading="eager"
-               width="800" 
-               height="600"
-               style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-        </div>
-      </div>
-      <div class="hero-bg-accent"></div>
-    </section>
-
-    <!-- Trust Bar -->
-    <section class="trust-bar">
-      <div class="container grid grid-4">
-        <div class="trust-item reveal">
-          <div class="trust-number">15+</div>
-          <p>Years of Experience</p>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-number">98%</div>
-          <p>Patient Satisfaction</p>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-number">5000+</div>
-          <p>Successful Recoveries</p>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-number">10+</div>
-          <p>Expert Specialists</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Conditions Section -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Conditions We Treat</h2>
-          <p>Comprehensive care for a wide range of shoulder injuries and orthopedic conditions.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V6l-8-4z"></path><path d="M9 12h6"></path></svg>
-            <h3>Rotator Cuff Injuries</h3>
-            <p>Specialized rehabilitation for tears and tendinitis to restore strength and range of motion.</p>
-          </article>
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-            <h3>Frozen Shoulder</h3>
-            <p>Targeted manual therapy and stretching protocols to relieve stiffness and regain mobility.</p>
-          </article>
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <h3>Shoulder Impingement</h3>
-            <p>Evidence-based treatments to reduce inflammation and correct biomechanical imbalances.</p>
-          </article>
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 12l10 10 10-10L12 2z"></path><path d="M12 8v8"></path></svg>
-            <h3>Labrum Tears</h3>
-            <p>Advanced diagnostic and therapeutic approaches for SLAP tears and Bankart lesions.</p>
-          </article>
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
-            <h3>Tendinitis</h3>
-            <p>Structured loading programs to treat tendon inflammation and promote long-term healing.</p>
-          </article>
-          <article class="card icon-card reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-            <h3>Sports Injuries</h3>
-            <p>Return-to-sport strategies tailored for athletes to prevent re-injury and maximize performance.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="section" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Why Choose Nordic Shoulder Clinic</h2>
-          <p>Our patient-centric approach ensures you receive the highest standard of orthopedic care.</p>
-        </div>
-        <div class="grid grid-2">
-          <article class="card reveal">
-            <h3>Evidence-Based Treatment</h3>
-            <p>We utilize the latest clinical research and proven methodologies to ensure effective and safe recovery.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Experienced Specialists</h3>
-            <p>Our team comprises renowned orthopedic surgeons and physiotherapists with decades of combined experience.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Personalized Rehab Plans</h3>
-            <p>Every treatment plan is tailored to your specific injury, lifestyle, and recovery goals.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Modern Diagnostics</h3>
-            <p>State-of-the-art imaging and biomechanical assessments for precise and early intervention.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Treatment Process Timeline -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Our Treatment Process</h2>
-          <p>A structured, transparent path from your first visit to full recovery.</p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <h3>1. Consultation</h3>
-            <p>Comprehensive assessment of your medical history, symptoms, and lifestyle to understand your needs.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>2. Diagnosis</h3>
-            <p>Advanced imaging and physical tests to pinpoint the exact cause of your shoulder pain.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>3. Personalized Treatment</h3>
-            <p>Development of a tailored treatment plan, ranging from manual therapy to surgical intervention if required.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>4. Rehabilitation</h3>
-            <p>Guided physiotherapy sessions focusing on restoring strength, flexibility, and function.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>5. Recovery & Prevention</h3>
-            <p>Final assessments and long-term strategies to maintain mobility and prevent future injuries.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section" style="background-color: var(--color-surface-alt);">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>What Our Patients Say</h2>
-          <p>Real stories from individuals who regained their mobility with us.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="testimonial-card reveal">
-            <p class="testimonial-text">"After my rotator cuff surgery, I thought my tennis days were over. The team at Nordic Clinic designed a rehab plan that got me back on the court stronger than ever."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Photo of Mark T." loading="lazy" width="48" height="48">
-              </div>
-              <div class="author-info">
-                <h4>Mark T.</h4>
-                <span>Amateur Athlete</span>
-              </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-accent hero-bg-accent-1"></div>
+            <div class="hero-bg-accent hero-bg-accent-2"></div>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1>Restore Your Mobility. Reclaim Your Life.</h1>
+                    <p class="hero-subtitle">Specialized orthopedic care and physiotherapy for shoulder injuries. From sports trauma to post-surgery recovery, we guide you back to full strength.</p>
+                    <div class="hero-ctas">
+                        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                        <a href="treatments.html" class="btn btn-secondary">Explore Treatments</a>
+                    </div>
+                </div>
             </div>
-          </article>
-          <article class="testimonial-card reveal">
-            <p class="testimonial-text">"The care I received for my frozen shoulder was exceptional. The therapists were incredibly knowledgeable and supportive throughout the entire process."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Photo of Sarah K." loading="lazy" width="48" height="48">
-              </div>
-              <div class="author-info">
-                <h4>Sarah K.</h4>
-                <span>Software Engineer</span>
-              </div>
-            </div>
-          </article>
-          <article class="testimonial-card reveal">
-            <p class="testimonial-text">"Professional, calm, and effective. I highly recommend Nordic Clinic to anyone dealing with chronic shoulder pain. They truly listen to their patients."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Photo of David L." loading="lazy" width="48" height="48">
-              </div>
-              <div class="author-info">
-                <h4>David L.</h4>
-                <span>Retired Teacher</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Specialists Preview -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Meet Our Specialists</h2>
-          <p>Expert care delivered by a dedicated team of professionals.</p>
-        </div>
-        <div class="grid grid-4">
-          <article class="card specialist-card reveal">
-            <div class="specialist-avatar">
-              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" alt="Dr. Anna Lindberg" loading="lazy" width="120" height="120" style="width:100%; height:100%; object-fit:cover;">
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-items reveal">
+                    <div class="trust-item">
+                        <h3>15+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="trust-item">
+                        <h3>10k+</h3>
+                        <p>Shoulders Restored</p>
+                    </div>
+                    <div class="trust-item">
+                        <h3>95%</h3>
+                        <p>Recovery Success Rate</p>
+                    </div>
+                    <div class="trust-item">
+                        <h3>4.9/5</h3>
+                        <p>Patient Satisfaction</p>
+                    </div>
+                </div>
             </div>
-            <h4>Dr. Anna Lindberg</h4>
-            <p class="text-muted" style="margin-bottom: var(--space-sm);">Lead Orthopedic Surgeon</p>
-            <p>Specializes in arthroscopic shoulder surgery and sports injuries.</p>
-          </article>
-          <article class="card specialist-card reveal">
-            <div class="specialist-avatar">
-              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80" alt="Erik Johansson" loading="lazy" width="120" height="120" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <h4>Erik Johansson</h4>
-            <p class="text-muted" style="margin-bottom: var(--space-sm);">Senior Physiotherapist</p>
-            <p>Expert in manual therapy and post-operative rehabilitation protocols.</p>
-          </article>
-          <article class="card specialist-card reveal">
-            <div class="specialist-avatar">
-              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=200&q=80" alt="Maria Svensson" loading="lazy" width="120" height="120" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <h4>Maria Svensson</h4>
-            <p class="text-muted" style="margin-bottom: var(--space-sm);">Sports Rehab Specialist</p>
-            <p>Focuses on athletic performance recovery and biomechanical analysis.</p>
-          </article>
-          <article class="card specialist-card reveal">
-            <div class="specialist-avatar">
-              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=200&q=80" alt="Dr. Lars Olsen" loading="lazy" width="120" height="120" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <h4>Dr. Lars Olsen</h4>
-            <p class="text-muted" style="margin-bottom: var(--space-sm);">Pain Management Expert</p>
-            <p>Utilizes multimodal approaches to manage chronic and acute shoulder pain.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="section" style="background-color: var(--color-surface-alt);">
-      <div class="container" style="max-width: 800px;">
-        <div class="section-header reveal">
-          <h2>Frequently Asked Questions</h2>
-          <p>Answers to common questions about our treatments and recovery process.</p>
-        </div>
-        <div class="accordion reveal">
-          <div class="accordion-item">
-            <button class="accordion-header">What should I bring to my first appointment? <span class="accordion-icon">+</span></button>
-            <div class="accordion-content">
-              <p>Please bring any relevant medical records, imaging results (X-rays, MRIs), a list of current medications, and comfortable clothing that allows easy access to your shoulder area.</p>
+        <!-- Conditions Section -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Conditions We Treat</h2>
+                    <p>Comprehensive diagnostic and treatment services for a wide range of shoulder conditions.</p>
+                </div>
+                <div class="grid grid-3">
+                    <!-- Card 1 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <line x1="10" y1="9" x2="8" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3>Rotator Cuff Injuries</h3>
+                        <p>Expert repair and rehabilitation for tears and strains in the rotator cuff tendons.</p>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="2" x2="12" y2="22"/>
+                                <path d="M2 12h20"/>
+                                <path d="M5 5l14 14"/>
+                                <path d="M19 5L5 19"/>
+                            </svg>
+                        </div>
+                        <h3>Frozen Shoulder</h3>
+                        <p>Targeted therapies to reduce stiffness and restore range of motion in adhesive capsulitis.</p>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3>Shoulder Impingement</h3>
+                        <p>Alleviating pain and pinching sensations through posture correction and targeted exercises.</p>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="6" r="3"/>
+                                <path d="M12 9v6"/>
+                                <path d="M9 15h6"/>
+                                <path d="M9 21h6"/>
+                            </svg>
+                        </div>
+                        <h3>Labrum Tears</h3>
+                        <p>Advanced diagnostic and surgical solutions for SLAP tears and labral instability.</p>
+                    </article>
+                    <!-- Card 5 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Tendinitis</h3>
+                        <p>Inflammation management and strengthening protocols for biceps and shoulder tendons.</p>
+                    </article>
+                    <!-- Card 6 -->
+                    <article class="card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="2"/>
+                                <path d="M12 7v5l-3 9"/>
+                                <path d="M12 12l3 9"/>
+                                <path d="M9 12h6"/>
+                            </svg>
+                        </div>
+                        <h3>Sports Injuries</h3>
+                        <p>Performance-focused recovery for acute athletic shoulder trauma and overuse injuries.</p>
+                    </article>
+                </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">How long does shoulder rehabilitation take? <span class="accordion-icon">+</span></button>
-            <div class="accordion-content">
-              <p>Recovery time varies depending on the severity of the injury and the individual's commitment to the rehab plan. It can range from a few weeks for minor issues to several months for post-surgical recovery.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">Do I need a referral to book a consultation? <span class="accordion-icon">+</span></button>
-            <div class="accordion-content">
-              <p>While a referral is not strictly necessary, it can be helpful for providing background medical information. You can book a consultation directly through our contact page.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">Is physiotherapy painful? <span class="accordion-icon">+</span></button>
-            <div class="accordion-content">
-              <p>You may experience some discomfort during rehabilitation as we work to restore mobility and strength. However, our therapists closely monitor your pain levels and adjust treatments to ensure they remain within a manageable threshold.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Final CTA Section -->
-    <section class="container">
-      <div class="cta-section reveal">
-        <h2>Ready to Start Your Recovery?</h2>
-        <p>Don't let shoulder pain limit your life. Book a consultation with our specialists today and take the first step towards restored mobility.</p>
-        <a href="contact.html" class="btn btn-primary">Book Your Consultation</a>
-      </div>
-    </section>
-  </main>
+        <!-- Why Choose Us -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Why Choose Nordic Shoulder Clinic</h2>
+                    <p>Our patient-centered approach combines advanced diagnostics with personalized care.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11H5a2 2 0 0 0-2 2v7h6"/>
+                                <path d="M9 11l3-3 4 4-3 3v6h6v-7a2 2 0 0 0-2-2h-4"/>
+                                <circle cx="12" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <h4>Evidence-Based Treatment</h4>
+                        <p>Our protocols are grounded in the latest orthopedic research and clinical trials to ensure optimal outcomes.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="8.5" cy="7" r="4"/>
+                                <path d="M20 8v6"/>
+                                <path d="M23 11h-6"/>
+                            </svg>
+                        </div>
+                        <h4>Experienced Specialists</h4>
+                        <p>Our team of orthopedic surgeons and physiotherapists bring decades of specialized shoulder expertise.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h4>Personalized Rehab Plans</h4>
+                        <p>No two shoulders are alike. We tailor rehabilitation programs to your specific anatomy and lifestyle.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h4>Fast Recovery Approach</h4>
+                        <p>We prioritize minimally invasive techniques and aggressive, safe rehab to get you back to life faster.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h4>Modern Diagnostics</h4>
+                        <p>Utilizing high-resolution ultrasound and MRI for precise, early-stage injury detection.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Continual Support</h4>
+                        <p>From your first consultation to your final checkup, our team is with you at every step.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Nordic Clinic</h4>
-          <p class="text-muted">Premium orthopedic care specialized in shoulder rehabilitation and sports injuries.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="treatments.html">Treatments</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>123 Health Avenue, Stockholm</li>
-            <li>+46 8 123 4567</li>
-            <li>info@nordicclinic.se</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Opening Hours</h4>
-          <ul>
-            <li>Mon - Fri: 8:00 - 18:00</li>
-            <li>Saturday: 9:00 - 14:00</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+        <!-- Treatment Process -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Our Treatment Process</h2>
+                    <p>A clear, structured path from initial pain to full recovery.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step reveal">
+                        <h4>1. Consultation</h4>
+                        <p>A thorough discussion of your symptoms, medical history, and lifestyle goals to understand your needs.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <h4>2. Diagnosis</h4>
+                        <p>Advanced imaging and physical assessments to pinpoint the exact root cause of your shoulder pain.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <h4>3. Personalized Plan</h4>
+                        <p>Development of a tailored treatment strategy, whether it requires surgical intervention or conservative care.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <h4>4. Rehabilitation</h4>
+                        <p>Hands-on physiotherapy and guided exercises to restore strength, stability, and mobility.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <h4>5. Recovery</h4>
+                        <p>Final phase conditioning and preventative education to ensure long-term shoulder health.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="script.js"></script>
+        <!-- Testimonials -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>What Our Patients Say</h2>
+                    <p>Real stories from people who regained their movement.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card reveal">
+                        <p>"After my rotator cuff surgery, I thought my tennis days were over. The team at Nordic Shoulder Clinic built a rehab plan that got me back on the court stronger than before."</p>
+                        <div style="margin-top: 1rem; font-weight: 600; color: var(--color-text);">Mark T.</div>
+                        <div style="font-size: 0.875rem; color: var(--color-text-muted);">Tennis Player & Patient</div>
+                    </article>
+                    <article class="card reveal">
+                        <p>"The level of care is exceptional. They explained every step of my frozen shoulder treatment. The stiffness is gone, and I have full motion back. Highly recommend."</p>
+                        <div style="margin-top: 1rem; font-weight: 600; color: var(--color-text);">Sarah L.</div>
+                        <div style="font-size: 0.875rem; color: var(--color-text-muted);">Software Engineer</div>
+                    </article>
+                    <article class="card reveal">
+                        <p>"I injured my shoulder during a swim meet. The diagnostics were quick, and the physiotherapy was incredibly effective. Minimal downtime, maximum results."</p>
+                        <div style="margin-top: 1rem; font-weight: 600; color: var(--color-text);">David R.</div>
+                        <div style="font-size: 0.875rem; color: var(--color-text-muted);">Competitive Swimmer</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialists Preview -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-lg reveal">
+                    <h2>Meet Our Specialists</h2>
+                    <p>A dedicated team focused entirely on shoulder health.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop" alt="Dr. Elena Rossi, Orthopedic Surgeon" class="specialist-img" loading="lazy">
+                        <h3>Dr. Elena Rossi</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Lead Orthopedic Surgeon</p>
+                        <p>Specializes in arthroscopic shoulder surgery and complex rotator cuff repairs with over 15 years of experience.</p>
+                    </article>
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop" alt="Michael Chen, Senior Physiotherapist" class="specialist-img" loading="lazy">
+                        <h3>Michael Chen</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Senior Physiotherapist</p>
+                        <p>Expert in sports rehabilitation and movement analysis, helping athletes return to peak performance safely.</p>
+                    </article>
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop" alt="Dr. Sarah Jenkins, Pain Management Specialist" class="specialist-img" loading="lazy">
+                        <h3>Dr. Sarah Jenkins</h3>
+                        <p style="color: var(--color-primary); margin-bottom: 0.5rem;">Pain Management Specialist</p>
+                        <p>Focuses on non-operative pain management and regenerative medicine techniques for chronic shoulder conditions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section section-alt">
+            <div class="container" style="max-width: 800px;">
+                <div class="text-center mb-lg reveal">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Answers to common questions about our clinic and treatments.</p>
+                </div>
+                
+                <div class="reveal">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What should I bring to my first appointment?
+                            <span class="accordion-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Please bring any recent imaging results (X-rays, MRIs), a list of current medications, your insurance card, and comfortable clothing that allows easy access to your shoulder area.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Do I need a referral to book a consultation?
+                            <span class="accordion-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                While a referral from your general practitioner is appreciated and often helps with insurance claims, it is not strictly required to book an initial consultation with our specialists.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How long does shoulder rehabilitation typically take?
+                            <span class="accordion-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Recovery times vary greatly depending on the injury and treatment. Minor impingements may resolve in 4-6 weeks, while post-surgical rotator cuff repairs can take 4-6 months for full recovery. We will provide a specific timeline during your consultation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="card reveal" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white); text-align: center; padding: 4rem 2rem; border: none;">
+                    <h2 style="color: var(--color-white);">Ready to Start Your Recovery?</h2>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 2rem;">Don't let shoulder pain hold you back. Book a consultation with our specialists today.</p>
+                    <a href="contact.html" class="btn btn-white">Book Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Nordic Shoulder</h4>
+                    <p>Premium orthopedic and physiotherapy care dedicated to shoulder health and recovery.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>123 Health Avenue</li>
+                        <li>Stockholm, Sweden</li>
+                        <li><a href="tel:+4681234567">+46 8 123 456 7</a></li>
+                        <li><a href="mailto:care@nordicshoulder.com">care@nordicshoulder.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Mon - Fri: 8:00 - 18:00</li>
+                        <li>Saturday: 9:00 - 14:00</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nordic Shoulder Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

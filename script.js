@@ -1,208 +1,224 @@
 /**
- * Nordic Shoulder Clinic - Vanilla JavaScript
- * Handles: Navigation, Theme Toggling, Accordion, 
- * Scroll Reveal, Sticky Nav, Form Validation.
+ * Nordic Shoulder Clinic - Main JavaScript
+ * 
+ * Features:
+ * - Mobile menu toggle
+ * - Sticky navbar effects
+ * - Scroll reveal animations (IntersectionObserver)
+ * - FAQ accordion
+ * - Active navigation highlighting
+ * - Vanilla JS form validation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Mobile Menu Toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const siteHeader = document.getElementById('site-header');
-  const navLinks = document.getElementById('nav-links');
+    /**
+     * 1. Mobile Navigation Toggle
+     */
+    const initMobileNav = () => {
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
 
-  if (navToggle && siteHeader) {
-    navToggle.addEventListener('click', () => {
-      siteHeader.classList.toggle('nav-open');
-    });
+        if (!menuToggle || !navLinks) return;
 
-    // Close menu when a link is clicked
-    if (navLinks) {
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (siteHeader.classList.contains('nav-open')) {
-            siteHeader.classList.remove('nav-open');
-          }
+        menuToggle.addEventListener('click', () => {
+            const isActive = navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active', isActive);
+            menuToggle.setAttribute('aria-expanded', isActive);
         });
-      });
-    }
-  }
 
-  // 2. Theme Toggle (Dark / Light Mode)
-  const themeToggle = document.getElementById('theme-toggle');
-  const sunIcon = document.getElementById('theme-icon-sun');
-  const moonIcon = document.getElementById('theme-icon-moon');
-  const root = document.documentElement;
-
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-      if (sunIcon) sunIcon.style.display = 'none';
-      if (moonIcon) moonIcon.style.display = 'block';
-    } else {
-      root.removeAttribute('data-theme');
-      if (sunIcon) sunIcon.style.display = 'block';
-      if (moonIcon) moonIcon.style.display = 'none';
-    }
-  }
-
-  // Load saved theme or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(currentTheme);
-      localStorage.setItem('theme', currentTheme);
-    });
-  }
-
-  // 3. Active Navigation Highlighting
-  // Compares current URL path with nav links
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  if (navLinks) {
-    navLinks.querySelectorAll('a').forEach(link => {
-      const linkPath = link.getAttribute('href').split('/').pop();
-      if (linkPath === currentPath) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active'); // Ensure no duplicates if hardcoded in HTML
-      }
-    });
-  }
-
-  // 4. Sticky Navbar Scroll Effect
-  if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        siteHeader.style.boxShadow = 'var(--shadow-md)';
-        siteHeader.style.borderBottomColor = 'var(--color-border)';
-      } else {
-        siteHeader.style.boxShadow = 'none';
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Init on load
-  }
-
-  // 5. Scroll Reveal Animations
-  const revealElements = document.querySelectorAll('.reveal');
-  
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    // Fallback for older browsers
-    revealElements.forEach(el => el.classList.add('active'));
-  }
-
-  // 6. FAQ Accordion
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-  
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const accordionItem = header.parentElement;
-      
-      // Close other open items
-      document.querySelectorAll('.accordion-item').forEach(item => {
-        if (item !== accordionItem && item.classList.contains('active')) {
-          item.classList.remove('active');
-        }
-      });
-
-      // Toggle current item
-      accordionItem.classList.toggle('active');
-    });
-  });
-
-  // 7. Form Validation
-  const contactForm = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
-
-  if (contactForm) {
-    const validateField = (field) => {
-      const formGroup = field.parentElement;
-      let isValid = true;
-
-      if (!field.value.trim()) {
-        isValid = false;
-      } else if (field.type === 'email') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(field.value.trim())) {
-          isValid = false;
-        }
-      }
-
-      if (isValid) {
-        formGroup.classList.remove('error');
-      } else {
-        formGroup.classList.add('error');
-      }
-
-      return isValid;
+        // Close mobile menu when a link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
     };
 
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById('name');
-      const email = document.getElementById('email');
-      const phone = document.getElementById('phone');
-      const message = document.getElementById('message');
+    /**
+     * 2. Sticky Navbar Scroll Effect
+     */
+    const initStickyHeader = () => {
+        const header = document.getElementById('siteHeader');
+        if (!header) return;
 
-      let isFormValid = true;
-      
-      isFormValid = validateField(name) && isFormValid;
-      isFormValid = validateField(email) && isFormValid;
-      isFormValid = validateField(phone) && isFormValid;
-      isFormValid = validateField(message) && isFormValid;
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
 
-      if (isFormValid) {
-        if (formSuccess) {
-          formSuccess.style.display = 'block';
-          formSuccess.setAttribute('role', 'alert');
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Init on load
+    };
+
+    /**
+     * 3. Scroll Reveal Animations
+     */
+    const initScrollReveal = () => {
+        const revealElements = document.querySelectorAll('.reveal');
+        if (!revealElements.length) return;
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => observer.observe(el));
+    };
+
+    /**
+     * 4. FAQ Accordion
+     */
+    const initAccordion = () => {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        if (!accordionItems.length) return;
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            
+            if (!header || !content) return;
+
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other open items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        const otherContent = otherItem.querySelector('.accordion-content');
+                        if (otherContent) otherContent.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                    content.style.maxHeight = null;
+                } else {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+    };
+
+    /**
+     * 5. Active Navigation Highlighting
+     */
+    const initActiveNav = () => {
+        const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
+        if (!navLinks.length) return;
+
+        let currentPath = window.location.pathname.split('/').pop();
+        if (currentPath === '' || currentPath === '/') {
+            currentPath = 'index.html';
         }
-        contactForm.reset();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          if (formSuccess) formSuccess.style.display = 'none';
-        }, 5000);
-      }
-    });
 
-    // Real-time error clearing on input
-    contactForm.querySelectorAll('.form-control').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.parentElement.classList.remove('error');
-        }
-      });
-    });
-  }
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href').split('/').pop();
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    };
 
-  // 8. Smooth Scrolling for internal anchor links
-  // (CSS handles scroll-behavior: smooth, but JS ensures offset for sticky header if needed)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        e.preventDefault();
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+    /**
+     * 6. Form Validation (Contact Page)
+     */
+    const initFormValidation = () => {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
 
-}); // End DOMContentLoaded
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const message = document.getElementById('message');
+        const successMsg = document.getElementById('formSuccess');
+
+        const showError = (input, message) => {
+            const formGroup = input.closest('.form-group');
+            if (!formGroup) return;
+            formGroup.classList.add('error');
+            const errorSpan = formGroup.querySelector('.form-error');
+            if (errorSpan) errorSpan.textContent = message;
+        };
+
+        const clearError = (input) => {
+            const formGroup = input.closest('.form-group');
+            if (!formGroup) return;
+            formGroup.classList.remove('error');
+        };
+
+        const validators = {
+            name: (val) => val.trim().length > 1 || 'Please enter your full name.',
+            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) || 'Please enter a valid email address.',
+            phone: (val) => /^[+]?[\d\s-]{7,}$/.test(val) || 'Please enter a valid phone number.',
+            message: (val) => val.trim().length > 10 || 'Please provide a brief description (min. 10 characters).'
+        };
+
+        // Real-time validation on blur
+        [name, email, phone, message].forEach(input => {
+            if (!input) return;
+            input.addEventListener('blur', () => {
+                const validator = validators[input.id];
+                const result = validator(input.value);
+                if (result !== true) {
+                    showError(input, result);
+                } else {
+                    clearError(input);
+                }
+            });
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isFormValid = true;
+
+            [name, email, phone, message].forEach(input => {
+                if (!input) return;
+                const validator = validators[input.id];
+                const result = validator(input.value);
+                if (result !== true) {
+                    showError(input, result);
+                    isFormValid = false;
+                } else {
+                    clearError(input);
+                }
+            });
+
+            if (isFormValid) {
+                // Simulate form submission
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                }
+            }
+        });
+    };
+
+    // Initialize all modules
+    initMobileNav();
+    initStickyHeader();
+    initScrollReveal();
+    initAccordion();
+    initActiveNav();
+    initFormValidation();
+});
